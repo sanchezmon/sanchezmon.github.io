@@ -1,0 +1,104 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+.nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav li {
+    margin: 0 15px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+
+/* Contenedor principal */
+.contenedor {
+    width:90%
+    max-width: 1000px;
+    margin: 20px auto;
+    display:grid;
+    grid-gap: 20px;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows:repeat(4, auto);
+    grid-template-areas:"header header header"
+            "contenido contenido contenido"
+            "footer footer footer";
+}
+
+.contenedor {
+width: 90%;
+max-width: 1000px;
+margin: 20px auto;
+display:grid;
+grid-gap: 20px;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(, auto);
+grid-template-areas: "header header header"
+"contenido contenido contenido"
+"footer footer footer";
+}
+.contenedor .header {
+background: #12203E;
+color: #fff;
+grid-area: header;
+}
+.contenedor .contenido {
+grid-area: contenido;
+display: flex;
+}
+.contenedor .footer {
+display: flex;
+background: #12203E;
+color: #fff;
+grid-area: footer;
+}
+/*Tamaño mediano*/
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+.contenedor .contenido .columna1,
+.contenedor .contenido .columna2 {
+width: 47%;
+background: #f3e0cd;
+}
+.contenedor .contenido .columna1{
+float: left;
+}
+.contenedor .contenido .columna2{
+float: right;
+height:200px;
+}
+.contenedor .contenido .columna3 {
+width: 98.5%;
+background: #f3e0cd;
+}
+.contenedor .contenido{
+display:inline-block;
+}
+}
+/*Tamaño pequeño*/
+@media screen and (max-width: 640px){
+}
+/*Tamaño por default (Grande)*/
+@media screen and (min-width: 1280px) {
+}
+
+footer {
+    background-color: #333;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+}
